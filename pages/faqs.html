@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preguntas Frecuentes - Asesorías Gabriel Larrondo</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="https://i.pinimg.com/originals/49/f5/63/49f5630b9d58ef169be8ebdc9100b9fa.png">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="faqs.html" class="nav-link active">FAQS</a>
+                </div>
+                <div class="nav-right">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" style="cursor: pointer;">0</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- Header-->
+
+        <!-- Modal de información -->
+        <div id="myModal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 id="modal-title" style="color: #FFF5DD;"></h2>
+                <p id="modal-description" style="color: #FFF5DD;"></p>
+            </div>
+        </div>  
+        <!-- Modal de información --> 
+
+        <!-- Modal para el carrito-->
+        <div id="cart-modal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close-cart" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 style="color: #FFF5DD;">Carrito de Compras</h2>
+                <table id="cart-items" style="width: 100%; color: #FFF5DD; margin: 20px 0;">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Producto dinamico -->
+                    </tbody>
+                </table>
+                <div style="color: #FFF5DD; margin-top: 20px;">
+                    <strong>Total: </strong> $<span id="total-price">0</span>
+                    <a href="https://www.mercadopago.com.ar" target="_blank" style="text-decoration: none;">
+                        <button id="pay-button" style="background-color: #EDC454; color: #1D1E1E; font-weight: 600; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">Pagar</button>
+                    </a>
+                </div>
+            </div>
+        </div> 
+        <!-- Modal para el carrito-->
+
+        <!-- Main Section - FAQs -->
+        <main>
+            <section class="faqs-section">
+                <h2 style="color: aliceblue;">PREGUNTAS FRECUENTES</h2>
+                <div class="faq-item">
+                    <h3>¿CÓMO COMPRAR?</h3>
+                    <p>Los pedidos se realizan exclusivamente a través de nuestro sitio web. Tienes la posibilidad de pagar con tarjeta de crédito/débito, mediante MercadoPago, y la opción para financiar hasta 3 cuotas sin interés. En caso de que quieras abonar en efectivo o transferencia bancaria, se puede seleccionar la opción de efectivo/transferencia al momento del pago.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿CUÁNTO DEMORA LA ENTREGA DEL PEDIDO?</h3>
+                    <p>Las rutinas se envían mediante correo electrónico, en la semana luego de haber realizado la compra.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>QUIERO CANCELAR MI PEDIDO ¿QUÉ DEBO HACER?</h3>
+                    <p>Puedes cancelar tu asesoría personalizada si la rutina aún no ha sido enviada por documento PDF, lo que suele ser en la primera semana después de haber confirmado la compra. Para realizar la cancelación, contáctate a través de los medios disponibles que se encuentran en el sitio web.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿QUÉ PASA CON TODA LA INFORMACIÓN QUE CARGO EN EL SITIO WEB?</h3>
+                    <p>Asesorías Gabriel Larrondo se compromete a conservar toda política de confidencialidad con el objetivo de proteger la privacidad de la información personal obtenida a través de la página.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿QUÉ INFORMACIÓN ES RECOGIDA?</h3>
+                    <p>Nuestro sitio web podrá recoger información personal como: Nombre, Apellido, información de contacto, correo electrónico e información demográfica.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿PUEDO PERSONALIZAR MI PLAN DESPUÉS DE REALIZAR LA COMPRA?</h3>
+                    <p>Claro, tienes hasta 48 horas después de la compra para solicitar modificaciones en tu plan de entrenamiento o nutrición. Contáctanos a través de los medios indicados para ajustar tu plan según tus necesidades.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿HAY UNA GARANTÍA DE RESULTADOS?</h3>
+                    <p>Nuestros planes están diseñados para maximizar tus resultados, pero es importante seguir las recomendaciones y mantengas un compromiso con el proceso. Los resultados varían según el individuo y su constancia con él.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿OFRECEN ASESORÍAS ONLINE EN VIVO?</h3>
+                    <p>Actualmente, nuestras asesorías personalizadas se entregan en formato PDF y a través de correo electrónico. Contamos con un grupo de whatsapp para los usuarios, para mantenernos motivados y actualizados, día a día.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿LOS PLANES INCLUYEN SEGUIMIENTO?</h3>
+                    <p>Sí, todos nuestros planes incluyen un seguimiento semanal para revisar el progreso y ajustar el plan si es necesario, de acuerdo a los resultados que se van obteniendo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿CÓMO FUNCIONA EL ENVÍO DE LOS PLANES?</h3>
+                    <p>Los planes personalizados son enviados en formato PDF a tu correo electrónico dentro de una semana luego de realizada la compra. Asegúrate de proporcionar una dirección de correo válida y verificar tu bandeja de spam.</p>
+                </div>
+            </section>
+        </main>
+        <!-- Main Section - FAQs -->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Navegación (Lado derecho) -->
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <a href="../index.html" class="footer-link">Inicio</a>
+                    <a href="sobre-mi.html" class="footer-link">Sobre mí</a>
+                    <a href="contacto.html" class="footer-link">Contacto</a>
+                    <a href="faqs.html" class="footer-link">FAQS</a>
+                </div>
+                <!-- Redes Sociales (Medio) -->
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <a href="#" class="footer-icon">
+                    <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                </div>
+                <!-- Contacto (Lado izquierdo) -->
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-phone"></i> 
+                        <span>+54 223 59-1040</span>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <span>AsesoriasLarrondo@training.com.ar</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/549223591040" target="_blank" class="whatsapp-float" style="text-decoration: none;">
+            <i class="fa fa-whatsapp whatsapp-icon"></i>
+            </a>
+            <div class="footer-text">
+                Copyright Larrondo Personalizados - Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos
+                <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank" style="color: rgb(60, 63, 248); text-decoration: underline;">ingresa acá.</a> /
+                <a href="contacto.html" style="color: rgb(60, 63, 248); text-decoration: underline; width:fit-content;">Botón de arrepentimiento</a>
+            </div>
+        </footer>
+        <!-- Footer -->
+         
+        <!-- código javascript e íconos -->
+        <script src="../js/script.js"></script>
+        <script src="https://kit.fontawesome.com/6e121d1d4a.js" crossorigin="anonymous"></script>
+    </body>
+</html>

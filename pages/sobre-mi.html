@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asesorías Gabriel Larrondo - Coaching y personalizados</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://i.pinimg.com/originals/49/f5/63/49f5630b9d58ef169be8ebdc9100b9fa.png">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <a href="faqs.html" class="nav-link">FAQS</a>
+                </div>
+                <div class="nav-right">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" style="cursor: pointer;">0</span> 
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- Header -->
+
+        <!-- Modal de información -->
+        <div id="myModal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 id="modal-title" style="color: #FFF5DD;"></h2>
+                <p id="modal-description" style="color: #FFF5DD;"></p>
+            </div>
+        </div>
+        <!-- Modal de información -->
+
+        <!-- Modal para el carrito-->
+        <div id="cart-modal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close-cart" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 style="color: #FFF5DD;">Carrito de Compras</h2>
+                <table id="cart-items" style="width: 100%; color: #FFF5DD; margin: 20px 0;">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Producto dinamico -->
+                    </tbody>
+                </table>
+                <div style="color: #FFF5DD; margin-top: 20px;">
+                    <strong>Total: </strong> $<span id="total-price">0</span>
+                    <a href="https://www.mercadopago.com.ar" target="_blank" style="text-decoration: none;">
+                        <button id="pay-button" style="background-color: #EDC454; color: #1D1E1E; font-weight: 600; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">Pagar</button>
+                    </a>
+                </div>
+            </div>
+        </div>     
+        <!-- Modal para el carrito-->
+
+        <!-- Sección about me-->
+        <section class="about-me">
+            <div class="about-me-left">
+                <h2>¿Quién soy además de entrenador y psicólogo deportivo?</h2>
+                <p>
+                    Mi propósito no se limita simplemente a motivar a las personas a adoptar un estilo de vida saludable, sino también a impulsar, el formar hábitos de disciplina y constancia para todos los aspectos de la vida.
+                </p>
+                <h2>El comienzo</h2>
+                <p>
+                    Mi camino comienza en la ciudad de Necochea. Al principio, decidí entrenar para generar un cambio significativo en mi rutina diaria. Aunque los primeros meses asistía de forma esporádica, con el tiempo comprendí la importancia de la constancia en cada acción, y aprendí a disfrutar del proceso. Sin el apoyo de un entrenador, me sumergí en el estudio del entrenamiento y la nutrición. Noches y días dedicados a investigar y realizar cursos me brindaron el conocimiento que hoy comparto con las personas a quienes asesoro.
+                </p>
+                <h2>¿Cómo es mi vida ahora?</h2>
+                <p>
+                    Actualmente, trabajo como playero en una estación de servicio YPF. A pesar de lo demandante que puede ser mi empleo, me esfuerzo por utilizar mis tiempos libres de manera productiva. Durante esos momentos, estudio diversos cursos sobre hipertrofia para seguir perfeccionando mis conocimientos, además de seguir ofreciendo asesorías personalizadas a personas interesadas en alcanzar sus objetivos físicos.
+                </p>
+                <p>
+                    Lo que me motiva cada día es saber que puedo ayudar a otros a mejorar su bienestar físico y emocional. Mi objetivo sigue siendo el de acompañar a las personas a crear hábitos que transformen sus vidas de manera integral, y por eso me sigo formando constantemente.
+                </p>
+                <h2>Mis conocimientos</h2>
+                <p>
+                    En el año 2024, logre certificarme en "Gualda training" como instructor personal trainer de salud y educación física, con especialización en nutrición deportiva, hipertrofía y manejo de lesiones deportivas.
+                </p>
+                <h2>Nuestra misión</h2>
+                <p>
+                    En "Larrondo personalizados" nos comprometemos a armar productos personalizados que conecten emocionalmente con cada cliente, ofreciendo una experiencia basada en calidad, creatividad y servicio al cliente.
+                </p>
+            </div>
+            <div class="about-me-right">
+                <h1>"LA DISCIPLINA SUPERA LA MOTIVACIÓN. EL CAMINO HACIA UNA VIDA SALUDABLE ES UN PROCESO DE CONSTANCIA."</h1>
+                <div class="image-collage">
+                    <img src="../img/NUEVO1.png" class="collage-image new-image">
+                    <img src="../img/NUEVO2.png" class="collage-image new-image">
+                </div>
+            </div>
+            <div class="image-collage">
+            <div class="image-wrapper">
+                <img src="../img/Sin título.png" class="collage-image">
+            </div>
+            <div class="image-wrapper">
+                <img src="../img/4.png" class="collage-image">
+            </div>
+            <div class="image-wrapper">
+                <img src="../img/22.png" class="collage-image">
+            </div>
+        </section>
+        <!-- Sección about me-->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <a href="../index.html" class="footer-link">Inicio</a>
+                    <a href="sobre-mi.html" class="footer-link">Sobre mí</a>
+                    <a href="contacto.html" class="footer-link">Contacto</a>
+                    <a href="faqs.html" class="footer-link">FAQS</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <a href="#" class="footer-icon">
+                    <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-phone"></i> 
+                        <span>+54 223 59-1040</span>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <span>AsesoriasLarrondo@training.com.ar</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/549223591040" target="_blank" class="whatsapp-float" style="text-decoration: none;">
+            <i class="fa fa-whatsapp whatsapp-icon"></i>
+            </a>
+            <div class="footer-text">
+                Copyright Larrondo Personalizados - Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos
+                <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank" style="color: rgb(60, 63, 248); text-decoration: underline;">ingresa acá.</a> /
+                <a href="contacto.html" style="color: rgb(60, 63, 248); text-decoration: underline; width:fit-content;">Botón de arrepentimiento</a>
+            </div>
+        </footer>
+        <!-- Footer -->
+         
+        <!-- código javascript e íconos-->
+        <script src="../js/script.js"></script>
+        <script src="https://kit.fontawesome.com/6e121d1d4a.js" crossorigin="anonymous"></script>
+    </body>
+</html>

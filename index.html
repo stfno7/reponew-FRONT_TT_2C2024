@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asesorías Gabriel Larrondo - Coaching y personalizados</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://i.pinimg.com/originals/49/f5/63/49f5630b9d58ef169be8ebdc9100b9fa.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="top"></div>
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="./pages/sobre-mi.html" class="nav-link">Sobre mí</a>
+                    <a href="pages/contacto.html" class="nav-link">Contacto</a>
+                    <a href="pages/faqs.html" class="nav-link">FAQS</a>
+                </div>
+                <div class="nav-right">
+                    <i class="fa-solid fa-cart-shopping"></i> 
+                    <span id="cart-count" style="cursor: pointer;">0</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- Header-->
+
+        <!-- Imagen -->
+        <section class="image-center">
+            <img src="img/dumbbell-svgrepo-com.svg" alt="Dumbbell" class="centered-image">
+        </section>
+        <!-- Imagen -->
+        <!-- Cards -->
+        <section class="card-section">
+            <div class="card-carousel">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="IMG/try2.png" alt="Rutina 1" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Rutina superávit calorico + dieta</h2>
+                        <p class="card-price">$34.000</p>
+                        <p class="card-payment"><i class="fa-regular fa-credit-card" style="margin-right: 5px;"></i>3 Cuotas sin interés</p>
+                        <a href="#" class="card-link ver-detalles">Ver detalles</a>
+                        <a href="#" class="card-link cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="IMG/try3.png" alt="Rutina 2" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Recomposición corporal</h2>
+                        <p class="card-price">$29.000</p>
+                        <p class="card-payment"><i class="fa-regular fa-credit-card" style="margin-right: 5px;"></i>3 Cuotas sin interés</p>
+                        <a href="#" class="card-link ver-detalles">Ver detalles</a>
+                        <a href="#" class="card-link cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="img/TRY.jpg" alt="Rutina 3" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Recetario déficit</h2>
+                        <p class="card-price" style="margin-top: 49px;">$18.000</p>
+                        <p class="card-payment"><i class="fa-regular fa-credit-card" style="margin-right: 5px;"></i>3 Cuotas sin interés</p>
+                        <a href="#" class="card-link ver-detalles">Ver detalles</a>
+                        <a href="#" class="card-link cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cards -->
+
+        <!-- Modal de información-->
+        <div id="myModal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 id="modal-title" style="color: #FFF5DD;"></h2>
+                <p id="modal-description" style="color: #FFF5DD;"></p>
+            </div>
+        </div>
+        <!-- Modal de información-->
+
+        <!-- Modal para el carrito-->
+        <div id="cart-modal" class="modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+            <div class="modal-content" style="background-color: #2E2E2E; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; text-align: center;">
+                <span class="close-cart" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 style="color: #FFF5DD;">Carrito de Compras</h2>
+                <table id="cart-items" style="width: 100%; color: #FFF5DD; margin: 20px 0;">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Producto dinamico -->
+                    </tbody>
+                </table>
+                <div style="color: #FFF5DD; margin-top: 20px;">
+                    <strong>Total: </strong> $<span id="total-price">0</span>
+                    <a href="https://www.mercadopago.com.ar" target="_blank" style="text-decoration: none;">
+                        <button id="pay-button" style="background-color: #EDC454; color: #1D1E1E; font-weight: 600; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">Pagar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal para el carrito-->
+
+        <!-- Sección frase motivacional-->
+        <section class="grab">
+            <div class="quote-container">
+                <svg width="84" height="63" viewBox="0 0 84 63" fill="none" xmlns="http://www.w3.org/2000/svg" class="quote-svg">
+                    <path d="M25.7897 30.8762C34.2948 30.8762 39.782 37.4608 39.782 45.9659C39.782 55.2941 32.923 62.9762 21.1256 62.9762C9.32819 62.9762 0 53.3736 0 38.5582C0 23.1942 9.8769 8.10446 34.2948 0.696777V7.8301C18.9307 11.9455 10.4256 21.548 10.4256 30.3275C10.4256 33.6198 11.7974 35.5403 13.7179 35.5403C16.7359 35.5403 18.382 30.8762 25.7897 30.8762Z" fill="#363636"></path>
+                    <path d="M83.8256 45.9657C83.8256 37.4606 78.3385 30.876 69.8334 30.876C62.4257 30.876 61.0539 35.5401 57.7616 35.5401C55.8411 35.5401 54.4693 33.6195 54.4693 30.3272C54.4693 21.5478 62.9744 11.9452 78.3385 7.82986V0.696533C53.9206 8.10421 44.0437 23.1939 44.0437 38.558C44.0437 53.3734 53.3719 62.9759 65.1693 62.9759C76.9667 62.9759 83.8256 55.2938 83.8256 45.9657Z" fill="#363636"></path>
+                </svg>
+                <h2>Comienza el cambio hoy, si no ahora, ¿cuándo?</h2>
+                <svg width="84" height="64" viewBox="0 0 84 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M58.2103 32.9275C49.7052 32.9275 44.218 26.3429 44.218 17.8378C44.218 8.50961 51.077 0.827565 62.8744 0.827566C74.6718 0.827567 84 10.4301 84 25.2455C84 40.6095 74.1231 55.6993 49.7052 63.1069L49.7052 55.9736C65.0693 51.8582 73.5744 42.2557 73.5744 33.4762C73.5744 30.1839 72.2026 28.2634 70.2821 28.2634C67.2641 28.2634 65.618 32.9275 58.2103 32.9275Z" fill="#363636"></path>
+                    <path d="M0.174332 17.8378C0.174331 26.3429 5.6615 32.9275 14.1666 32.9275C21.5743 32.9275 22.9461 28.2634 26.2384 28.2634C28.1589 28.2634 29.5307 30.1839 29.5307 33.4762C29.5307 42.2557 21.0256 51.8582 5.6615 55.9736L5.6615 63.1069C30.0794 55.6993 39.9563 40.6095 39.9563 25.2455C39.9563 10.4301 30.6281 0.827567 18.8307 0.827566C7.03329 0.827565 0.174333 8.50961 0.174332 17.8378Z" fill="#363636"></path>
+                </svg>
+                </svg>
+            </div>
+        </section>
+        <!-- Sección frase motivacional-->
+
+        <!-- Sección contenido-->
+        <section class="include">
+            <h2>¿Qué incluye?</h2>
+            <div class="include-card">
+                <div class="include-text">
+                    <h3>Rutinas de entrenamiento</h3>
+                    <p>El plan te ofrece una rutina de entrenamiento que se renueva al mes para garantizar la mayor efectividad. 
+                        Te proporcionamos flexibilidad con opciones de 3, 4 y 5 días por semana para adaptarse a tu agenda y metas.
+                    </p>
+                </div>
+                <div class="include-square">
+                    <svg width="157" height="157" viewBox="0 0 157 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50.832 9.37014V30.2699" stroke="#FFF5DD" stroke-width="2.9333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M106.564 9.37014V30.2699" stroke="#FFF5DD" stroke-width="2.9333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M64.3854 99.8947C61.4363 99.8947 58.8032 99.3357 56.4861 98.2176C54.169 97.0834 52.3299 95.5359 50.9688 93.5753C49.6239 91.5985 48.9272 89.33 48.8786 86.7698H51.9653C52.014 88.7953 52.5892 90.5858 53.691 92.1413C54.7929 93.6806 56.2674 94.8878 58.1146 95.7628C59.978 96.6378 62.052 97.0753 64.3367 97.0753C66.8159 97.0753 68.9872 96.5892 70.8506 95.617C72.7302 94.6447 74.1966 93.3323 75.2498 91.6795C76.3031 90.0105 76.8297 88.1471 76.8297 86.0893C76.8297 83.8856 76.2544 81.9574 75.104 80.3046C73.9535 78.6357 72.3494 77.3394 70.2915 76.4158C68.2337 75.476 65.8437 75.0061 63.1215 75.0061H61.2743V72.1866H63.1215C65.4386 72.1866 67.5126 71.7654 69.3436 70.9228C71.1746 70.064 72.6167 68.8568 73.67 67.3013C74.7394 65.7457 75.2741 63.9066 75.2741 61.784C75.2741 59.7909 74.8123 58.0248 73.8887 56.4854C72.9651 54.9461 71.685 53.7389 70.0485 52.8639C68.4281 51.9889 66.5242 51.5515 64.3367 51.5515C62.2303 51.5515 60.3183 51.9808 58.6007 52.8396C56.8993 53.6984 55.5463 54.9056 54.5417 56.4611C53.5371 58.0167 53.0267 59.8234 53.0105 61.8812H50.0209C50.0533 59.3048 50.7015 57.0282 51.9653 55.0514C53.2454 53.0746 54.9549 51.5352 57.0938 50.4334C59.2488 49.3154 61.6794 48.7563 64.3854 48.7563C67.14 48.7563 69.5543 49.3316 71.6283 50.482C73.7186 51.6325 75.3389 53.188 76.4894 55.1486C77.656 57.1093 78.2394 59.2886 78.2394 61.6868C78.2394 64.571 77.4373 67.042 75.8331 69.0999C74.2452 71.1415 72.0901 72.5593 69.3679 73.3533V73.6207C72.5924 74.3336 75.1445 75.8 77.0241 78.0199C78.9037 80.2398 79.8435 82.9296 79.8435 86.0893C79.8435 88.6818 79.1792 91.0233 77.8505 93.1135C76.5218 95.2038 74.6908 96.8565 72.3575 98.0718C70.0404 99.2871 67.383 99.8947 64.3854 99.8947ZM104.586 49.4369V99.2141H101.548V52.6452H101.256L90.076 60.0583V56.8014L101.159 49.4369H104.586Z" fill="#FFF5DD"></path>
+                        <path d="M106.686 19.8811C129.885 21.1351 141.519 29.9827 141.519 62.7257V105.779C141.519 134.482 134.552 148.833 99.7192 148.833H57.9197C23.0867 148.833 16.1201 134.482 16.1201 105.779V62.7257C16.1201 29.9827 27.7543 21.2048 50.9531 19.8811H106.686Z" stroke="#FFF5DD" stroke-width="2.9333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M103.144 134.622V133.91L109.489 133.91C110.307 133.91 110.888 134.117 111.68 134.117V134.065C110.109 133.263 109.437 132.357 108.909 131.502L109.529 130.946C110.307 132.318 111.218 133.302 112.801 134.065V134.453C111.218 135.217 110.294 136.227 109.529 137.586L108.909 137.016C109.437 136.175 110.109 135.282 111.68 134.466V134.415C110.888 134.415 110.321 134.622 109.489 134.622L103.144 134.622Z" fill="#FFF5DD"></path>
+                        <path d="M139.656 118.049H17.7402" stroke="#FFF5DD" stroke-width="2.9333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M45.3916 136.739V130.154H47.6165C48.131 130.154 48.5532 130.242 48.8833 130.418C49.2134 130.591 49.4578 130.83 49.6164 131.135C49.775 131.439 49.8543 131.785 49.8543 132.173C49.8543 132.561 49.775 132.905 49.6164 133.205C49.4578 133.505 49.2145 133.741 48.8865 133.913C48.5586 134.082 48.1395 134.167 47.6294 134.167H45.8289V133.446H47.6037C47.9552 133.446 48.2381 133.395 48.4525 133.292C48.669 133.189 48.8255 133.043 48.9219 132.855C49.0205 132.664 49.0698 132.437 49.0698 132.173C49.0698 131.909 49.0205 131.679 48.9219 131.482C48.8233 131.285 48.6658 131.132 48.4493 131.025C48.2328 130.916 47.9466 130.861 47.5908 130.861H46.189V136.739H45.3916ZM48.4911 133.781L50.1115 136.739H49.1856L47.5908 133.781H48.4911Z" fill="#FFF5DD"></path>
+                        <path d="M54.1925 134.72V131.8H54.9512V136.739H54.1925V135.903H54.141C54.0253 136.154 53.8452 136.367 53.6009 136.543C53.3565 136.716 53.0478 136.803 52.6749 136.803C52.3662 136.803 52.0918 136.736 51.8518 136.6C51.6117 136.463 51.4231 136.258 51.2859 135.983C51.1487 135.707 51.0801 135.358 51.0801 134.938V131.8H51.8389V134.887C51.8389 135.247 51.9397 135.534 52.1411 135.748C52.3448 135.963 52.6041 136.07 52.9192 136.07C53.1079 136.07 53.2997 136.022 53.4948 135.925C53.692 135.829 53.857 135.681 53.9899 135.482C54.1249 135.282 54.1925 135.028 54.1925 134.72Z" fill="#FFF5DD"></path>
+                        <path d="M58.4888 131.8V132.443H55.9295V131.8H58.4888ZM56.6754 130.617H57.4342V135.324C57.4342 135.538 57.4653 135.699 57.5274 135.806C57.5917 135.911 57.6732 135.982 57.7718 136.019C57.8725 136.053 57.9786 136.07 58.0901 136.07C58.1737 136.07 58.2423 136.066 58.2959 136.057C58.3495 136.046 58.3923 136.038 58.4245 136.031L58.5788 136.713C58.5274 136.732 58.4556 136.752 58.3634 136.771C58.2712 136.792 58.1544 136.803 58.0129 136.803C57.7986 136.803 57.5885 136.757 57.3828 136.665C57.1791 136.573 57.0098 136.432 56.8748 136.244C56.7419 136.055 56.6754 135.817 56.6754 135.53V130.617Z" fill="#FFF5DD"></path>
+                        <path d="M59.6302 136.739V131.8H60.389V136.739H59.6302ZM60.016 130.977C59.8681 130.977 59.7406 130.927 59.6334 130.826C59.5284 130.725 59.4759 130.604 59.4759 130.463C59.4759 130.321 59.5284 130.2 59.6334 130.099C59.7406 129.999 59.8681 129.948 60.016 129.948C60.1639 129.948 60.2904 129.999 60.3954 130.099C60.5026 130.2 60.5562 130.321 60.5562 130.463C60.5562 130.604 60.5026 130.725 60.3954 130.826C60.2904 130.927 60.1639 130.977 60.016 130.977Z" fill="#FFF5DD"></path>
+                        <path d="M62.5376 133.768V136.739H61.7788V131.8H62.5118V132.572H62.5761C62.6919 132.321 62.8676 132.12 63.1034 131.967C63.3392 131.813 63.6436 131.736 64.0166 131.736C64.3509 131.736 64.6435 131.804 64.8943 131.942C65.1451 132.077 65.3402 132.282 65.4795 132.559C65.6188 132.833 65.6885 133.181 65.6885 133.601V136.739H64.9297V133.652C64.9297 133.264 64.8289 132.962 64.6274 132.745C64.426 132.527 64.1494 132.417 63.7979 132.417C63.5557 132.417 63.3392 132.47 63.1484 132.575C62.9598 132.68 62.8108 132.833 62.7015 133.035C62.5922 133.236 62.5376 133.481 62.5376 133.768Z" fill="#FFF5DD"></path>
+                        <path d="M68.5283 136.854C68.2154 136.854 67.9313 136.796 67.6763 136.678C67.4212 136.558 67.2186 136.385 67.0686 136.16C66.9186 135.933 66.8435 135.658 66.8435 135.337C66.8435 135.054 66.8993 134.825 67.0107 134.649C67.1222 134.471 67.2712 134.332 67.4576 134.231C67.6441 134.13 67.8499 134.055 68.075 134.006C68.3022 133.954 68.5305 133.914 68.7598 133.884C69.0599 133.845 69.3032 133.816 69.4897 133.797C69.6783 133.775 69.8155 133.74 69.9012 133.691C69.9891 133.641 70.033 133.556 70.033 133.433V133.408C70.033 133.091 69.9462 132.844 69.7726 132.668C69.6011 132.493 69.3407 132.405 68.9913 132.405C68.6291 132.405 68.345 132.484 68.1393 132.643C67.9335 132.801 67.7888 132.971 67.7052 133.151L66.985 132.893C67.1136 132.593 67.2851 132.36 67.4994 132.192C67.7159 132.023 67.9517 131.905 68.2068 131.839C68.464 131.77 68.7169 131.736 68.9656 131.736C69.1242 131.736 69.3064 131.755 69.5122 131.794C69.7201 131.83 69.9205 131.906 70.1134 132.022C70.3085 132.138 70.4703 132.312 70.5989 132.546C70.7275 132.78 70.7918 133.093 70.7918 133.485V136.739H70.033V136.07H69.9944C69.943 136.177 69.8573 136.292 69.7372 136.414C69.6172 136.536 69.4575 136.64 69.2582 136.726C69.0588 136.812 68.8155 136.854 68.5283 136.854ZM68.6441 136.173C68.9441 136.173 69.1971 136.114 69.4028 135.996C69.6108 135.878 69.7672 135.726 69.8723 135.539C69.9794 135.353 70.033 135.157 70.033 134.951V134.257C70.0009 134.295 69.9301 134.331 69.8208 134.363C69.7137 134.393 69.5893 134.42 69.4479 134.443C69.3085 134.465 69.1724 134.484 69.0395 134.501C68.9088 134.516 68.8027 134.529 68.7212 134.54C68.524 134.565 68.3397 134.607 68.1682 134.665C67.9989 134.721 67.8617 134.805 67.7567 134.919C67.6538 135.03 67.6023 135.183 67.6023 135.375C67.6023 135.639 67.6999 135.838 67.8949 135.974C68.0921 136.106 68.3418 136.173 68.6441 136.173Z" fill="#FFF5DD"></path>
+                        <path d="M75.482 133.768V136.739H74.7232V131.8H75.4563V132.572H75.5206C75.6364 132.321 75.8121 132.12 76.0479 131.967C76.2837 131.813 76.5881 131.736 76.961 131.736C77.2954 131.736 77.588 131.804 77.8388 131.942C78.0896 132.077 78.2846 132.282 78.4239 132.559C78.5633 132.833 78.6329 133.181 78.6329 133.601V136.739H77.8741V133.652C77.8741 133.264 77.7734 132.962 77.5719 132.745C77.3704 132.527 77.0939 132.417 76.7424 132.417C76.5002 132.417 76.2837 132.47 76.0929 132.575C75.9043 132.68 75.7553 132.833 75.646 133.035C75.5367 133.236 75.482 133.481 75.482 133.768Z" fill="#FFF5DD"></path>
+                        <path d="M83.1318 134.72V131.8H83.8906V136.739H83.1318V135.903H83.0804C82.9646 136.154 82.7846 136.367 82.5402 136.543C82.2959 136.716 81.9872 136.803 81.6142 136.803C81.3056 136.803 81.0312 136.736 80.7911 136.6C80.5511 136.463 80.3625 136.258 80.2253 135.983C80.0881 135.707 80.0195 135.358 80.0195 134.938V131.8H80.7783V134.887C80.7783 135.247 80.879 135.534 81.0805 135.748C81.2841 135.963 81.5435 136.07 81.8586 136.07C82.0472 136.07 82.2391 136.022 82.4341 135.925C82.6313 135.829 82.7964 135.681 82.9293 135.482C83.0643 135.282 83.1318 135.028 83.1318 134.72Z" fill="#FFF5DD"></path>
+                        <path d="M87.351 136.842C86.8751 136.842 86.4647 136.737 86.1196 136.527C85.7766 136.314 85.5119 136.019 85.3254 135.639C85.1411 135.258 85.0489 134.814 85.0489 134.308C85.0489 133.802 85.1411 133.356 85.3254 132.971C85.5119 132.583 85.7713 132.28 86.1035 132.064C86.4379 131.845 86.828 131.736 87.2738 131.736C87.5311 131.736 87.7851 131.779 88.0358 131.864C88.2866 131.95 88.5149 132.09 88.7207 132.282C88.9265 132.473 89.0904 132.726 89.2126 133.041C89.3348 133.356 89.3959 133.744 89.3959 134.205V134.527H85.5891V133.871H88.6242C88.6242 133.592 88.5685 133.343 88.457 133.125C88.3477 132.906 88.1912 132.734 87.9876 132.607C87.7861 132.481 87.5482 132.417 87.2738 132.417C86.9716 132.417 86.7101 132.493 86.4893 132.643C86.2707 132.79 86.1024 132.983 85.9845 133.221C85.8666 133.459 85.8077 133.714 85.8077 133.987V134.424C85.8077 134.797 85.872 135.113 86.0006 135.372C86.1314 135.629 86.3125 135.826 86.544 135.961C86.7755 136.094 87.0445 136.16 87.351 136.16C87.5503 136.16 87.7304 136.132 87.8912 136.076C88.0541 136.019 88.1945 135.933 88.3123 135.819C88.4302 135.703 88.5213 135.56 88.5856 135.388L89.3187 135.594C89.2415 135.843 89.1119 136.061 88.9297 136.25C88.7475 136.437 88.5224 136.582 88.2545 136.687C87.9865 136.79 87.6854 136.842 87.351 136.842Z" fill="#FFF5DD"></path>
+                        <path d="M94.4381 131.8L92.6119 136.739H91.8402L90.014 131.8H90.8371L92.2004 135.736H92.2518L93.615 131.8H94.4381Z" fill="#FFF5DD"></path>
+                        <path d="M96.7426 136.854C96.4297 136.854 96.1457 136.796 95.8906 136.678C95.6355 136.558 95.433 136.385 95.2829 136.16C95.1329 135.933 95.0579 135.658 95.0579 135.337C95.0579 135.054 95.1136 134.825 95.2251 134.649C95.3365 134.471 95.4855 134.332 95.672 134.231C95.8585 134.13 96.0642 134.055 96.2893 134.006C96.5165 133.954 96.7448 133.914 96.9741 133.884C97.2742 133.845 97.5175 133.816 97.704 133.797C97.8926 133.775 98.0298 133.74 98.1155 133.691C98.2034 133.641 98.2474 133.556 98.2474 133.433V133.408C98.2474 133.091 98.1606 132.844 97.9869 132.668C97.8155 132.493 97.555 132.405 97.2056 132.405C96.8434 132.405 96.5594 132.484 96.3536 132.643C96.1478 132.801 96.0031 132.971 95.9196 133.151L95.1993 132.893C95.328 132.593 95.4994 132.36 95.7138 132.192C95.9303 132.023 96.1661 131.905 96.4211 131.839C96.6783 131.77 96.9313 131.736 97.1799 131.736C97.3385 131.736 97.5207 131.755 97.7265 131.794C97.9344 131.83 98.1348 131.906 98.3278 132.022C98.5228 132.138 98.6846 132.312 98.8132 132.546C98.9419 132.78 99.0062 133.093 99.0062 133.485V136.739H98.2474V136.07H98.2088C98.1573 136.177 98.0716 136.292 97.9516 136.414C97.8315 136.536 97.6718 136.64 97.4725 136.726C97.2732 136.812 97.0299 136.854 96.7426 136.854ZM96.8584 136.173C97.1585 136.173 97.4114 136.114 97.6172 135.996C97.8251 135.878 97.9816 135.726 98.0866 135.539C98.1938 135.353 98.2474 135.157 98.2474 134.951V134.257C98.2152 134.295 98.1445 134.331 98.0352 134.363C97.928 134.393 97.8037 134.42 97.6622 134.443C97.5229 134.465 97.3868 134.484 97.2539 134.501C97.1231 134.516 97.017 134.529 96.9356 134.54C96.7384 134.565 96.554 134.607 96.3825 134.665C96.2132 134.721 96.076 134.805 95.971 134.919C95.8681 135.03 95.8167 135.183 95.8167 135.375C95.8167 135.639 95.9142 135.838 96.1093 135.974C96.3065 136.106 96.5562 136.173 96.8584 136.173Z" fill="#FFF5DD"></path>
+                    </svg>
+                </div>
+                <div class="include-text">
+                    <h3>Seguimiento</h3>
+                    <p>Únite a nuestro grupo exclusivo de whatsapp, recibirás una invitación al ser miembro de un plan, donde podrás encontrar
+                        consejos y apoyo para alcanzar todos tus planes.
+                    </p>
+                </div>
+                <div class="include-square">
+                    <svg width="157" height="158" viewBox="0 0 157 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M58.8747 144.589H98.1247C130.833 144.589 143.916 131.445 143.916 98.5838V59.1504C143.916 26.2892 130.833 13.1447 98.1247 13.1447H58.8747C26.1663 13.1447 13.083 26.2892 13.083 59.1504V98.5838C13.083 131.445 26.1663 144.589 58.8747 144.589Z" stroke="#FFF5DD" stroke-width="3.01528" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M45.792 54.2209C52.3337 60.7932 62.9966 60.7932 69.6037 54.2209" stroke="#FFF5DD" stroke-width="3.01528" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M87.3965 54.2209C93.9382 60.7932 104.601 60.7932 111.208 54.2209" stroke="#FFF5DD" stroke-width="3.01528" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M54.95 85.4388H102.05C105.321 85.4388 107.937 88.0677 107.937 91.3538C107.937 107.719 94.7887 120.929 78.5 120.929C62.2112 120.929 49.0625 107.719 49.0625 91.3538C49.0625 88.0677 51.6792 85.4388 54.95 85.4388Z" stroke="#FFF5DD" stroke-width="3.01528" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="include-text">
+                    <h3>Nutrición</h3>
+                    <p>Los miembros del plan pueden acceder a consultas nutricionales para obtener dietas totalmente personalizadas</p>
+                </div>
+                <div class="include-square">
+                    <svg width="158" height="158" viewBox="0 0 158 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45.293 119.487V105.86" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round"></path>
+                        <path d="M79 119.488V92.2328" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round"></path>
+                        <path d="M112.707 119.488V78.5392" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round"></path>
+                        <path d="M112.706 38.5122L109.678 42.0672C92.8905 61.6855 70.3755 75.5764 45.293 81.8305" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round"></path>
+                        <path d="M93.417 38.5122H112.706V57.7355" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M59.2503 144.833H98.7503C131.667 144.833 144.834 131.666 144.834 98.7498V59.2498C144.834 26.3331 131.667 13.1664 98.7503 13.1664H59.2503C26.3337 13.1664 13.167 26.3331 13.167 59.2498V98.7498C13.167 131.666 26.3337 144.833 59.2503 144.833Z" stroke="#FFF5DD" stroke-width="3.03449" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- Sección contenido-->
+
+        <!-- Texto en grande final -->
+        <section id="alcanzar-objetivos" style="text-align: center; margin: 50px 0;">
+            <h2 style="font-size: 8vw; color: var(--color-secundario);">ALCANZA TUS OBJETIVOS</h2>
+            <a href="#top" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 20px; background-color: #FBAE17; border: none; border-radius: 5px; cursor: pointer;">
+            Empezá hoy
+            </button>
+            </a>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <a href="index.html" class="footer-link">Inicio</a>
+                    <a href="pages/sobre-mi.html" class="footer-link">Sobre mí</a>
+                    <a href="pages/contacto.html" class="footer-link">Contacto</a>
+                    <a href="pages/faqs.html" class="footer-link">FAQS</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <a href="#" class="footer-icon">
+                    <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-phone"></i> 
+                        <span>+54 223 59-1040</span>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <span>AsesoriasLarrondo@training.com.ar</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://wa.me/549223591040" target="_blank" class="whatsapp-float" style="text-decoration: none;">
+            <i class="fa fa-whatsapp whatsapp-icon"></i>
+            </a>
+            <div class="footer-text">
+                Copyright Larrondo Personalizados - Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos
+                <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank" style="color: rgb(60, 63, 248); text-decoration: underline;">ingresa acá.</a> /
+                <a href="./pages/contacto.html" style="color: rgb(60, 63, 248); text-decoration: underline; width:fit-content;">Botón de arrepentimiento</a>
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        <!-- código javascript e íconos -->
+        <script src="js/script.js"></script>
+        <script src="https://kit.fontawesome.com/6e121d1d4a.js" crossorigin="anonymous"></script>
+    </body>
+</html>
